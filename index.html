@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://fb.me/react-0.13.3.js"></script>
+    <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
+  </head>
+  <body>
+    <div id="content"></div>
+    <script type="text/jsx">
+      'use strict';
+      var HelloThere = React.createClass({
+        clickMe: function() {
+          alert('Hi!');
+        },
+        render: function() {
+          return (
+            <div style={divStyle}className="box" onClick={this.clickMe.bind(this)}>Hello Everyone. Please click me.</div>
+          );
+        }
+      });
+
+      var divStyle = {
+        border: '5px solid red',
+        backgroundColor: '#fff',
+        borderWidth: 1,
+        padding: 10,
+        width: 100,
+        height: 100
+      }
+
+      React.render(<HelloThere />, document.getElementById('content'));
+    </script>
+  </body>
+</html>
